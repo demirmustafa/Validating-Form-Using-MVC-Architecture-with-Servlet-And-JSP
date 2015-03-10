@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<!-- This is the main page and this link for redirect to the login.jsp page. -->
+
 <a href="/MVCForm/Controller?action=login">Click here to log in.</a>
 
 </body>
