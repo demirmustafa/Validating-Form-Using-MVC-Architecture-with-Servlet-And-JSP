@@ -10,12 +10,16 @@
 
 	<form action="/MVCForm/Controller" method="post">
 	
-		<input type="hidden" name="action" value="dologin"/>
+		<input type="hidden" name="action" value="dologin"/>  
 		Email: <input  type="text" name="email" value="<%= request.getAttribute("email") %>"/>
 		Password: <input type="text" name="password" value="<%= request.getAttribute("password") %>"/>
 		<input type="submit" value="OK"/>
 	
 	</form>
+	
+	<!-- The action element is only used to redirecting of the pages. -->
+	
+	<!-- validationmessage is the hidden info area (some errors, warnings etc.) -->
 	
 	<h2><%= request.getAttribute("validationmessage") %></h2>
 
