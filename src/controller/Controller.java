@@ -45,6 +45,7 @@ public class Controller extends HttpServlet {
 			
 			
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
+			// redirect to login.jsp page
 		}
 	}
 
@@ -71,11 +72,14 @@ public class Controller extends HttpServlet {
 			
 			if(user.validate()){
 				request.getRequestDispatcher("/loginsuccess.jsp").forward(request, response);
+				// redirect to the loginsuccess.jsp page
 			}
 			
 			else{
 				request.setAttribute("validationmessage", user.getMessage());
 				request.getRequestDispatcher("/login.jsp").forward(request, response);
+				
+				//if catch the error in the User class (for example: if password contains space), this condition is run.
 			}
 		}
 		
